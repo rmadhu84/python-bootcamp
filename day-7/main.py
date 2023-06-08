@@ -9,5 +9,6 @@ while "_" in display:
         if chosen_word[i] == guess:
             display[i] = guess
     print(display)
+    print("You win!")
 
 
