@@ -1,6 +1,7 @@
 import random
 from hangman_art import stages, logo
 from hangman_words import word_list
+from os import system
 
 print(logo)
 chosen_word = random.choice(word_list)
@@ -16,10 +17,13 @@ for _ in range(word_length):
 
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
+    system('clear')
+
     if guess not in guessed:
         guessed += guess
     else:
-        print(f"You have already guess {guess}.")
+        print(f"You have already guessed {guess}.")
+        print(f"{' '.join(display)}")
         print(stages[lives])
         continue
 
