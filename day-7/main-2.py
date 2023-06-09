@@ -8,8 +8,6 @@ word_length = len(chosen_word)
 stages = hangman_art.stages
 end_of_game = False
 lives = 6
-#Testing code
-print(f'Pssst, the solution is {chosen_word}.')
 
 #Create blanks
 display = []
