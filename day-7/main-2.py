@@ -1,11 +1,10 @@
 import random
-import hangman_art
-import hangman_words
+from hangman_art import stages, logo
+from hangman_words import word_list
 
-print(hangman_art.logo)
-chosen_word = random.choice(hangman_words.word_list)
+print(logo)
+chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
-stages = hangman_art.stages
 end_of_game = False
 lives = 6
 
