@@ -20,7 +20,23 @@ def encrypt(plain_text, shift):
         else:
             encrypted_string += ltr
         # print(f"{ltr} => {alphabet[alphabet.index(ltr) + shift]}")
-    print(f"The encoded text is {encrypted_string}!")
+    print(f"The encoded text is {encrypted_string}")
 
 
-encrypt(plain_text=text, shift=shift)
+def decrypt(encrypted_text, shift):
+    decrypted_string = ""
+    for ltr in encrypted_text:
+        if ltr in alphabet:
+            new_position = alphabet.index(ltr) - shift
+            print(f"{ltr} => {alphabet[new_position]}")
+            decrypted_string += alphabet[new_position]
+        else:
+            decrypted_string += ltr
+        # print(f"{ltr} => {alphabet[alphabet.index(ltr) + shift]}")
+    print(f"The deccoded text is {decrypted_string}")
+
+
+if direction == "encode":
+    encrypt(plain_text=text, shift=shift)
+else:
+    decrypt(encrypted_text=text, shift=shift)
