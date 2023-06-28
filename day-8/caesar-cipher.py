@@ -1,6 +1,5 @@
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
             'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
@@ -15,7 +14,7 @@ def encrypt(plain_text, shift):
             new_position = alphabet.index(ltr) + shift
             if new_position > last_index:
                 new_position = new_position - no_of_alphabets
-            # print(f"{ltr} => {alphabet[new_position]}")
+            print(f"{ltr} => {alphabet[new_position]}")
             encrypted_string += alphabet[new_position]
         else:
             encrypted_string += ltr
@@ -38,5 +37,5 @@ def decrypt(encrypted_text, shift):
 
 if direction == "encode":
     encrypt(plain_text=text, shift=shift)
-else:
+elif direction == "decode":
     decrypt(encrypted_text=text, shift=shift)
