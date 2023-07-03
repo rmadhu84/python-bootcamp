@@ -15,6 +15,10 @@ empty_dictionary["second_item"] = "This is the second item."
 json_frm_str = json.dumps(empty_dictionary, indent=4)
 print(json_frm_str)
 
+# Edit an item
+programming_dictionary["Bug"] = "A moth in your computer."
+print(json.dumps(programming_dictionary, indent=4))
+
 # clear an existion dictionary
 programming_dictionary = {}
 print(json.dumps(programming_dictionary, indent=4))
