@@ -19,6 +19,10 @@ print(json_frm_str)
 programming_dictionary["Bug"] = "A moth in your computer."
 print(json.dumps(programming_dictionary, indent=4))
 
+# Looping thru a dictionary
+for key in programming_dictionary:
+    print(programming_dictionary[key])
+
 # clear an existion dictionary
 programming_dictionary = {}
 print(json.dumps(programming_dictionary, indent=4))
