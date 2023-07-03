@@ -14,3 +14,7 @@ empty_dictionary["second_item"] = "This is the second item."
 # json_obj = json.loads(str(empty_dictionary))
 json_frm_str = json.dumps(empty_dictionary, indent=4)
 print(json_frm_str)
+
+# clear an existion dictionary
+programming_dictionary = {}
+print(json.dumps(programming_dictionary, indent=4))
